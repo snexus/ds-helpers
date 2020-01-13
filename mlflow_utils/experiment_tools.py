@@ -1,14 +1,11 @@
-import mlflow  # assumes MLFlow is installed
 import mlflow
 import tempfile
 import os
 from mlflow.tracking import MlflowClient
 from enum import Enum, auto
 
-
 import mlflow.sklearn
 import mlflow.xgboost
-
 
 
 class Models(Enum):
@@ -152,6 +149,7 @@ def split_string(s: str, max_c: int = 400, split_s: str = ",") -> list:
             res_list.append(res_s[:-1])
             res_s = ""
     return res_list
+
 
 if __name__ == '__main__':
     print(mlflow)
